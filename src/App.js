@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Chart_1 from "./Components/Chart_1";
+import Filter from "./Components/Filter";
+import Header from "./Components/Header";
+import SideNavBar from "./Components/SideNavBar";
+import Table from "./Components/Table";
+import TrackedFrequency from "./Components/TrackedFrequency";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex h-screen bg-gray-900">
+      <SideNavBar />
+
+      {/* Main Content Section */}
+      <div className="w-[95%] h-screen overflow-y-auto">
+        <Header />
+        <Filter />
+        <Chart_1 />
+        < Table/>
+        <TrackedFrequency />
+      </div>
     </div>
   );
 }
 
-export default App;
+export default App;
