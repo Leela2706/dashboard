@@ -14,7 +14,7 @@ const SideNavBar = () => {
       {/* Top Section */}
       <div className="space-y-8">
         {/* Logo */}
-        <div className="text-orange-500 text-4xl font-bold">X</div>
+        <div className="text-orange-500 text-4xl font-bold pl-3">X</div>
 
         {/* Icons */}
         <div className="space-y-6">
