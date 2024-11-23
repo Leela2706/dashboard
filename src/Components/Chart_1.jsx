@@ -2,6 +2,7 @@
 // import { Scatter } from "react-chartjs-2";
 // import { Chart as ChartJS, Tooltip, Legend, LinearScale, PointElement } from "chart.js";
 // import { FaSearch } from "react-icons/fa";
+// import { FiMoreVertical } from "react-icons/fi"; // Import kebab menu icon
 
 // // Register Chart.js components
 // ChartJS.register(Tooltip, Legend, LinearScale, PointElement);
@@ -85,20 +86,26 @@
 
 //   return (
 //     <div style={{ backgroundColor: "#121212", padding: "1rem", borderRadius: "8px" }}>
-//       <h3 style={{ color: "#fff", textAlign: "left" }}>Recommendations</h3>
+//       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+//         <h3 style={{ color: "#fff", textAlign: "left", margin: 0 }}>Recommendations</h3>
+//         <FiMoreVertical style={{ color: "#fff", cursor: "pointer" }} /> {/* Kebab menu icon */}
+//       </div>
+//       <hr style={{ borderColor: "#2A2A2A", borderWidth: "1px", margin: "10px 0" }} /> {/* Add margin here */}
 //       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px" }}>
 //         <p style={{ color: "#9E9E9E", fontSize: "14px", margin: 0 }}>Optimization opportunities</p>
-//         <div style={{ position: "relative", width: "200px" }}>
+//         <div style={{ position: "relative", width: "300px" }}>
 //           <input
 //             type="text"
 //             placeholder="Search"
 //             style={{
 //               width: "100%",
-//               padding: "0.5rem 2rem 0.5rem 0.8rem",
+//               height: "30px", // Reduced height
+//               padding: "10px 20px",
 //               borderRadius: "4px",
 //               border: "1px solid #ccc",
 //               backgroundColor: "#212121",
 //               color: "#fff",
+//               fontSize: "14px",
 //             }}
 //           />
 //           <FaSearch
@@ -108,11 +115,12 @@
 //               right: "10px",
 //               transform: "translateY(-50%)",
 //               color: "#9E9E9E",
+//               fontSize: "16px",
 //             }}
 //           />
 //         </div>
 //       </div>
-//       <div style={{ height: "400px", backgroundColor: "#121212" }}> {/* Set the background color of the chart container */}
+//       <div style={{ height: "400px", backgroundColor: "#121212" }}>
 //         <Scatter data={data} options={options} />
 //       </div>
 //     </div>
@@ -123,11 +131,11 @@
 
 
 
-
 import React from "react";
 import { Scatter } from "react-chartjs-2";
 import { Chart as ChartJS, Tooltip, Legend, LinearScale, PointElement } from "chart.js";
 import { FaSearch } from "react-icons/fa";
+import { FiMoreVertical } from "react-icons/fi"; // Import kebab menu icon
 
 // Register Chart.js components
 ChartJS.register(Tooltip, Legend, LinearScale, PointElement);
@@ -206,26 +214,31 @@ const Chart_1 = () => {
       },
     },
     maintainAspectRatio: false,
-    backgroundColor: "#121212", // Set the background color of the chart
+    backgroundColor: "#111827", // Set the background color of the chart
   };
 
   return (
-    <div style={{ backgroundColor: "#121212", padding: "1rem", borderRadius: "8px" }}>
-      <h3 style={{ color: "#fff", textAlign: "left" }}>Recommendations</h3>
-      <hr style={{ borderColor: "#2A2A2A", borderWidth: "1px" }} />
+    <div style={{ backgroundColor: "#111827", padding: "1rem", borderRadius: "8px" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <h3 style={{ color: "#fff", textAlign: "left", margin: 0 }}>Recommendations</h3>
+        <FiMoreVertical style={{ color: "#fff", cursor: "pointer" }} /> {/* Kebab menu icon */}
+      </div>
+      <hr style={{ borderColor: "#2A2A2A", borderWidth: "1px", margin: "10px 0" }} /> {/* Add margin here */}
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px" }}>
         <p style={{ color: "#9E9E9E", fontSize: "14px", margin: 0 }}>Optimization opportunities</p>
-        <div style={{ position: "relative", width: "200px" }}>
+        <div style={{ position: "relative", width: "300px" }}>
           <input
             type="text"
             placeholder="Search"
             style={{
               width: "100%",
-              padding: "0.5rem 2rem 0.5rem 0.8rem",
+              height: "30px", // Reduced height
+              padding: "10px 20px",
               borderRadius: "4px",
               border: "1px solid #ccc",
               backgroundColor: "#212121",
               color: "#fff",
+              fontSize: "14px",
             }}
           />
           <FaSearch
@@ -235,11 +248,12 @@ const Chart_1 = () => {
               right: "10px",
               transform: "translateY(-50%)",
               color: "#9E9E9E",
+              fontSize: "16px",
             }}
           />
         </div>
       </div>
-      <div style={{ height: "400px", backgroundColor: "#121212" }}>
+      <div style={{ height: "400px", backgroundColor: "#111827" }}>
         <Scatter data={data} options={options} />
       </div>
     </div>
