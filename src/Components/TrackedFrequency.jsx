@@ -58,7 +58,7 @@ const TrackedFrequency = () => {
           <div className="flex space-x-4 mt-2 text-sm">
             <div className="text-blue-500">● Awaiting test</div>
             <div className="text-green-500">● Actively tracked</div>
-            <div className="text-red-500">● no longer tracked</div>
+            <div className="text-red-500">● Mo longer tracked</div>
           </div>
         </div>
       </div>
